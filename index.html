@@ -11,10 +11,10 @@
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="style/header.css">
-	<link rel="stylesheet" type="text/css" href="style/page_one.css">
+	<link rel="stylesheet" type="text/css" href="style/home.css">
 	<link rel="stylesheet" type="text/css" href="style/page_two.css">
 	<link rel="stylesheet" type="text/css" href="style/page_three.css">
-	<link rel="stylesheet" type="text/css" href="style/page_four.css">
+	<link rel="stylesheet" type="text/css" href="style/sponsors.css">
 	<link rel="stylesheet" type="text/css" href="style/contacts.css">
 
 </head>
@@ -23,18 +23,115 @@
 
 	<div id="header">
 		<div id="menu">
-			<a href="./index.html#one">HOME</a>
-			<a href="./index.html#two">ABOUT US</a>
-			<a href="./index.html#three">PROJECTS</a>
-			<a href="./index.html#four">SPONSORS</a>
-			<a href="./index.html#contacts">CONTACTS</a>
+			<ul class="menu__list">
+				<li>
+					<a href="./index.html#home">HOME</a>
+				</li>
+				<li>
+					<a href="./index.html#two">ABOUT US</a>
+				</li>
+				<li>
+					<a href="./index.html#three">PROJECTS</a>
+					<span class="arrow menu__arrow"></span>
+					<ul class="sub-menu__list">
+						<li>
+							<a href="#">PAST</a>
+						</li>
+						<li>
+							<a href="#">NEAREST</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="./index.html#sponsors">SPONSORS</a>
+				</li>
+				<li>
+					<a href="./index.html#contacts">CONTACTS</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 
-	<div class="page" id="one"></div>
+	<div class="page" id="home">
+		<div class="title">
+			<h1 class="estiem">
+				<span>E</span><span>uropean</span>
+				<span>S</span><span>tuden</span>
+				<span>T</span><span>s</span>
+				<span>I</span><span>ndustrial</span>
+				<span>E</span><span>ngineering and</span>
+				<span>M</span><span>anagemen</span>
+			</h1>
+		</div>
+	</div>
+
 	<div class="page" id="two"></div>
 	<div class="page" id="three"></div>
-	<div class="page" id="four"></div>
+
+	<div class="page" id="sponsors">
+		<div class="container">
+
+			<div class="card" id="times">
+				<div class="face face_1">
+					<div class="content">
+						<p>
+							Найбільший турнір Європи з вирішення
+							бізнес-кейсів у сфері IEM. Щороку даний захід
+							залучає більше 350 команд, які змагаються за
+							звання IEM-студента року у три етапи: місцева
+							кваліфікація, півфінал і фінал. На турнірі команди
+							повинні застосовувати професійні знання в
+							поєднанні з аналітичним та креативним мисленням.
+						</p>
+					</div>
+				</div>
+				<div class="face face_2">
+					<h2>T•I•M•E•S</h2>
+				</div>
+			</div>
+
+			<div class="card" id="vision">
+				<div class="face face_1">
+					<div class="content">
+						<p>
+							Тематичний проєкт, насичений семінарами,
+							воркшопами та візитами до компаній із метою
+							поглибленого розуміння тематики проеєкту.
+							Студенти отримують можливість поглибити свої
+							теоретичні знання на практиці в промисловій
+							індустрії. Минулорічні теми Vision: «Вік ШІ»,
+							«Продукти харчування: виробництво та логістика»,
+							«Python для аналізу даних», «Логістика – майбутнє
+							складування», «eDrive - Майбутнє мобільності»,
+							«Data Science».
+						</p>
+					</div>
+				</div>
+				<div class="face face_2">
+					<h2>VISION</h2>
+				</div>
+			</div>
+
+			<div class="card" id="academic_days">
+				<div class="face face_1">
+					<div class="content">
+						<p>
+							Academic Days є найбільш академічною подією в
+							рамках ESTIEM. Кожен захід «Academic Days»
+							зосереджений на конкретній академічній темі з
+							метою поглиблення знань. Протягом заходу
+							відбуваються лекції та практичні заняття, студенти
+							отримують ґрунтовні знання і чітке розуміння теми.
+						</p>
+					</div>
+				</div>
+				<div class="face face_2">
+					<h2>ACADEMIC DAYS</h2>
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 	<div class="page" id="contacts">
 		<div id="social_networks">
@@ -73,6 +170,8 @@
 			</ul>
 		</div>
 	</div>
+
+	<script src="script.js"></script>
 
 </body>
 

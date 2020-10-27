@@ -1,14 +1,14 @@
-
 #header {
     width: calc(100% - 100px);
     height: 50px;
     background: #255b43;
     position: fixed;
     padding: 0 50px 0 50px;
+    z-index: 99;
 }
 
 #header #menu {
-	height: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -16,26 +16,86 @@
     right: 50px;
 }
 
+#header #menu ul {
+    list-style: none;
+}
+
+#header #menu li {
+    position: relative;
+}
+
+#header #menu .menu__list {
+    display: flex;
+}
+
+body.touch #header #menu .menu__list .sub-menu__list.open,
+body.mouse #header #menu .menu__list>li:hover .sub-menu__list {
+    display: block;
+}
+
+#header #menu .sub-menu__list {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    padding: 20px 0px 0px 0px;
+    min-width: 150px;
+}
+
+#header #menu .sub-menu__list>li {
+    background-color: #255b438f;
+    padding: 0 10px 0 0;
+}
+
 #header #menu a {
-	color: white;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     margin: 0 10px 0 10px;
     position: relative;
 }
 
-#header #menu a::before {
-	content: '';
-	width: 0%;
-	height: 2px;
-	right: 0;
-	bottom: 0;
-	position: absolute;
-	background: white;
-	transition: 0.2s;
+#header #menu a.parent {
+    margin: 0px 30px 0px 0px;
 }
 
-#header #menu a:hover::before {
-	width: 100%;
-	left: 0;
+#header #menu .menu__list>li::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: white;
+    transition: 0.2s;
+}
+
+#header #menu .menu__list>li.list:hover::before {
+    width: calc(100% - 30px);
+    left: 0px;
+}
+
+#header #menu .menu__list>li:hover::before {
+    width: calc(100% - 20px);
+    left: 10px;
+}
+
+.arrow {
+	display: none;
+    width: 0;
+    height: 0;
+    border-top: 10px solid white;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+body.touch .arrow {
+	display: block;
+}
+
+.arrow.active {
+	transform: rotate(-180deg);
 }

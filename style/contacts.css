@@ -1,12 +1,11 @@
-
 #contacts {
-	background: white;
-	height: 20vh;
-	position: relative;
+    background: #cfd9ce;
+    height: 20vh;
+    position: relative;
 }
 
 #social_networks {
-	height: 100%;
+    height: 100%;
     margin: 0;
     float: right;
     display: flex;
@@ -17,85 +16,99 @@
 }
 
 #social_networks ul {
-	list-style: none;
+    list-style: none;
 }
 
 #social_networks ul li {
-	width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin: 0 10px;
     cursor: pointer;
     border-radius: 50%;
-    border: 3px solid #255b43;
+    border: 2px solid #384d47;
     float: left;
     transition: all 0.5s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.5;
 }
 
 #social_networks ul li .fa {
-	color: #255b43;
-	transition: all 0.5s ease;
+    color: #384d47;
+    transition: all 0.5s ease;
+    font-size: 20px;
 }
+
+#social_networks ul li .fa-2x {
+    font-size: unset;
+}
+
+#social_networks ul li:hover {
+    opacity: 0.8;
+}
+
 
 /* linkedin */
 
 #social_networks ul li:hover.linkedin {
-	border: 3px solid #0e76a8;
-	transition: all 0.5s ease;
+    border: 2px solid #0e76a8;
+    transition: all 0.5s ease;
 }
 
 #social_networks ul li:hover .fa-linkedin {
-	color: #0e76a8;
-	transition: all 0.5s ease;
-} 
+    color: #0e76a8;
+    transition: all 0.5s ease;
+}
 
 
 /* facebook */
 
 #social_networks ul li:hover.facebook {
-	border: 3px solid #3b5998;
-	transition: all 0.5s ease;
+    border: 2px solid #3b5998;
+    transition: all 0.5s ease;
 }
 
 #social_networks ul li:hover .fa-facebook {
-	color: #3b5998;
-	transition: all 0.5s ease;
-} 
+    color: #3b5998;
+    transition: all 0.5s ease;
+}
+
 
 /* instagram */
 
 #social_networks ul li:hover.instagram {
-	border: 3px solid #ee2a7b;
-	transition: all 0.5s ease;
+    border: 2px solid #c42567;
+    transition: all 0.5s ease;
 }
 
 #social_networks ul li:hover .fa-instagram {
-	color: #ee2a7b;
-	transition: all 1s ease;
+    color: #c42567;
+    transition: all 1s ease;
 }
+
 
 /* youtube */
 
 #social_networks ul li:hover.youtube {
-  border: 3px solid #dd4b39;
-  transition: all 0.5s ease;
+    border: 2px solid #bb321f;
+    transition: all 0.5s ease;
 }
 
 #social_networks ul li:hover .fa-youtube {
-  color: #dd4b39;
-  transition: all 0.5s ease;
+    color: #bb321f;
+    transition: all 0.5s ease;
 }
+
 
 /* telegram */
 
 #social_networks ul li:hover.telegram {
-  border: 3px solid #0088cc;
-  transition: all 0.5s ease;
+    border: 2px solid #0088cc;
+    transition: all 0.5s ease;
 }
 
 #social_networks ul li:hover .fa-telegram {
-  color: #0088cc;
-  transition: all 0.5s ease;
+    color: #0088cc;
+    transition: all 0.5s ease;
 }
