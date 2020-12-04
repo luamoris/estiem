@@ -168,3 +168,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#prepros
+prepros-6.config
