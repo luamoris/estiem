@@ -1,0 +1,98 @@
+/*========================================================================
+Sidebar
+==========================================================================*/
+
+.sidebar {
+	@include flexbox(column, space-between, center);
+	background-color: $c_sidebar;
+	padding: 15px 15px 35px 15px;
+}
+
+
+/*------------------------------------ Menu Start */
+
+.menu-start {
+	@include flexbox(column, center, center);
+	max-width: 50px;
+	max-height: 50px;
+	margin-bottom: 10px;
+}
+
+
+
+/*------------------------------------ Menu Center */
+
+.menu-center {
+	@include flexbox(column, center, center);
+	width: 100%;
+	height: calc(100% - 110px);
+}
+
+// .menu-center__list {}
+
+.menu-center__item {
+	@include size(50px, 50px);
+	margin-bottom: 20px;
+	border-radius: 50%;
+
+	&:last-child {
+		margin: 0;	
+	}
+
+	a {
+		@include flexbox(row, center, center);
+		width: 100%;
+		height: 100%;
+	}
+
+	&:hover {
+		background-color: $c_fon;
+		transition: background-color 300ms;
+	}
+
+	&:hover svg {
+		animation: move_item 200ms ease-in-out;
+	}
+
+	&:hover svg path{
+		fill: $c_hover;
+	}
+
+	&:active svg {
+		transform: scale(1.1);
+		transition: all 100ms ease;
+	}
+
+}
+
+
+/*------------------------------------ Menu End */
+
+
+.menu-end {
+	@include flexbox(column, center, center);
+	margin-top: 10px;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+
+/*------------------------------------ Keyframes */
+
+@keyframes move_item {
+	0% {
+		transform: translateX(-2px);
+	}
+	25% {
+		transform: translateX(2px);
+	}
+	50% {
+		transform: translateX(-2px);
+	}
+	75% {
+		transform: translateX(2px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
