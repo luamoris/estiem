@@ -39,8 +39,11 @@ searchCancel.onclick = () => {
 // Burger 
 
 const sidebar = document.querySelector('.sidebar');
+const menuCenter = document.querySelector('.menu-center');
 const menuBurger = document.querySelector('.menu-burger');
+
 menuBurger.onclick = () => {
 	sidebar.classList.toggle('active');
 	menuBurger.classList.toggle('active');
+	menuCenter.classList.toggle('active');
 }

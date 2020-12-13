@@ -14,7 +14,8 @@ Main settings
 }
 
 .sidebar {
-	@include size(80px, 100%);
+	max-width: 80px;
+	height: 100%;
 }
 
 .content {

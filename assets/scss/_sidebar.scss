@@ -12,7 +12,6 @@ Sidebar
 	width: 100%;
 	height: 100%;
 	padding: 15px 15px 35px 15px;
-	background-color: $c_sidebar;
 }
 
 /*------------------------------------ Menu Start */
@@ -23,16 +22,19 @@ Sidebar
 	max-height: 50px;
 	margin-bottom: 10px;
 
-	a {
-		@include flexbox(row, center, center);
-		width: 100%;
-		height: 100%;
+	.menu-logo {
+		a {
+			@include flexbox(row, center, center);
+			width: 100%;
+			height: 100%;
+		}
+	
+		&:active svg {
+			transform: scale(0.9);
+			transition: all 100ms ease;
+		}
 	}
 
-	&:active svg {
-		transform: scale(0.9);
-		transition: all 100ms ease;
-	}
 }
 
 .logo {
