@@ -1,0 +1,33 @@
+
+
+//------------------------------------ Variables
+
+$c_sidebar: #79B89B;
+
+$c_hover: #5C9078;
+
+$c_footer: #05321D;
+
+$c_line: #A96C56;
+
+$c_fon: #F5F9F7;
+
+
+
+//------------------------------------ Mixin (@include)
+
+@mixin size($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+@mixin flexbox($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+
+
+//------------------------------------------------------------------------

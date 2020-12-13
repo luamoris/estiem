@@ -3,6 +3,7 @@ Sidebar
 ==========================================================================*/
 
 .sidebar {
+	position: fixed;
 	@include flexbox(column, space-between, center);
 	background-color: $c_sidebar;
 	padding: 15px 15px 35px 15px;
@@ -15,9 +16,50 @@ Sidebar
 	max-width: 50px;
 	max-height: 50px;
 	margin-bottom: 10px;
+
+	a {
+		@include flexbox(row, center, center);
+		width: 100%;
+		height: 100%;
+	}
+
+	&:active svg {
+		transform: scale(0.9);
+		transition: all 100ms ease;
+	}
 }
 
+.logo {
+	position: relative;
 
+	&[title]::after {
+		display: none;
+		opacity: 0;
+		content: "The ESTIEM!";
+		position: absolute;
+		left: 135%;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: $c_hover;
+		color: $c_fon;
+		border-radius: 5px;
+		padding: 5px;
+	}
+
+	&[title]:hover::after {
+		display: inline;
+		animation: opacity_item 500ms ease-out forwards;
+	}
+}
+
+@keyframes opacity_item {
+	99% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 /*------------------------------------ Menu Center */
 
@@ -36,7 +78,7 @@ Sidebar
 			content: '';
 			position: absolute;
 			right: -35px;
-			top: -100%;
+			top: -100vh;
 			width: 18.5px;
 			height: 37px;
 			background-image: url(../img/pointer.svg);
@@ -45,32 +87,32 @@ Sidebar
 	
 		&.home-active::after {
 			top: calc(0% + 7px);
-			transition: 300ms;
+			transition: 300ms ease-out;
 		}
 	
 		&.people-active::after {
 			top: calc(0% + 77px);
-			transition: 300ms;
+			transition: 300ms ease-out;
 		}
 	
 		&.event-active::after {
 			top: calc(0% + 147px);
-			transition: 300ms;
+			transition: 300ms ease-out;
 		}
 	
 		&.news-active::after {
 			top: calc(0% + 217px);
-			transition: 300ms;
+			transition: 300ms ease-out;
 		}
 	
 		&.handshake-active::after {
 			top: calc(0% + 287px);
-			transition: 300ms;
+			transition: 300ms ease-out;
 		}
 	
 		&.phone-active::after {
 			top: calc(0% + 357px);
-			transition: 300ms;
+			transition: 300ms ease-out;
 		}
 
 	}
