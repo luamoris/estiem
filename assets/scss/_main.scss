@@ -24,6 +24,12 @@ Main settings
 	background-color: $c_fon;
 }
 
+* {
+	font-family: 'Montserrat';
+	font-weight: 500;
+	font-style: normal;
+}
+
 ::selection {
 	color: $c_fon;
 	background-color: $c_sidebar;

@@ -35,6 +35,8 @@ Header
 	border-radius: calc(0% + 50px);
 
 	.search__input {
+		font-family: 'Montserrat';
+		font-weight: normal;
 		height: 100%;
 		width: calc(100% - 50px);
 		background-color: transparent;
@@ -43,11 +45,23 @@ Header
 	}
 
 	.search__input::placeholder {
-		color: #434343;
+		color: $c_sidebar;
 		opacity: 0.3;
 	}
-}
 
+	.search__cancel.active {
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.search__cancel.none {
+		opacity: 0;
+		cursor: auto;
+		user-select: none;
+		pointer-events: none;
+	}
+
+}
 
 
 
