@@ -165,7 +165,6 @@ Main settings
 Sidebar
 ==========================================================================*/
 .sidebar {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,56 +221,53 @@ Sidebar
   height: calc(100% - 110px);
 }
 
-.menu-center::after {
+.menu-center__list {
+  position: relative;
+}
+
+.menu-center__list ul::after {
   content: '';
   position: absolute;
-  right: -20px;
-  top: -37px;
+  right: -35px;
+  top: -100%;
   width: 18.5px;
   height: 37px;
   background-image: url(../img/pointer.svg);
   background-size: 18.5px 37px;
 }
 
-.menu-center.home-active::after {
-  content: '';
-  position: absolute;
-  right: -20px;
-  top: calc(75px + 177px + 7px);
-  width: 18.5px;
-  height: 37px;
-  background-image: url(../img/pointer.svg);
-  background-size: 18.5px 37px;
+.menu-center__list ul.home-active::after {
+  top: calc(0% + 7px);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-.menu-center.people-active::after {
-  top: calc(75px + 177px + 7px + 70px);
+.menu-center__list ul.people-active::after {
+  top: calc(0% + 77px);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-.menu-center.event-active::after {
-  top: calc(75px + 177px + 7px + 140px);
+.menu-center__list ul.event-active::after {
+  top: calc(0% + 147px);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-.menu-center.news-active::after {
-  top: calc(75px + 177px + 7px + 210px);
+.menu-center__list ul.news-active::after {
+  top: calc(0% + 217px);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-.menu-center.handshake-active::after {
-  top: calc(75px + 177px + 7px + 280px);
+.menu-center__list ul.handshake-active::after {
+  top: calc(0% + 287px);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-.menu-center.phone-active::after {
-  top: calc(75px + 177px + 7px + 350px);
+.menu-center__list ul.phone-active::after {
+  top: calc(0% + 357px);
   -webkit-transition: 300ms;
   transition: 300ms;
 }

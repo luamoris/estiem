@@ -28,6 +28,10 @@ $c_fon: #F5F9F7;
 	align-items: $align;
 }
 
+@mixin position($index, $size) {
+	top: (259px + ($index * $size)) * 100% / 894px;
+}
+
 
 //------------------------------------------------------------------------
 
