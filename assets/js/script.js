@@ -35,3 +35,12 @@ searchCancel.onclick = () => {
 	searchCancel.classList.remove('active');
 	searchCancel.classList.add('none');
 }
+
+// Burger 
+
+const sidebar = document.querySelector('.sidebar');
+const menuBurger = document.querySelector('.menu-burger');
+menuBurger.onclick = () => {
+	sidebar.classList.toggle('active');
+	menuBurger.classList.toggle('active');
+}

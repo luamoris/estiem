@@ -335,7 +335,10 @@ Sidebar
 ==========================================================================*/
 .sidebar {
   position: fixed;
-  z-index: 100;
+  background-color: #79B89B;
+}
+
+.sidebar__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,8 +352,10 @@ Sidebar
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #79B89B;
+  width: 100%;
+  height: 100%;
   padding: 15px 15px 35px 15px;
+  background-color: #79B89B;
 }
 
 /*------------------------------------ Menu Start */
@@ -884,6 +889,7 @@ Media
 ==========================================================================*/
 .menu-burger,
 .menu-info {
+  position: relative;
   display: none;
 }
 
@@ -892,6 +898,25 @@ Media
   .sidebar {
     width: 100%;
     height: 50px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .sidebar::after {
+    position: absolute;
+    content: '';
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #D9EBE2;
+    z-index: -1;
+    -webkit-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+  }
+  .sidebar.active::after {
+    top: 0;
+  }
+  .sidebar__body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -905,17 +930,14 @@ Media
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #79B89B;
     padding: 5px 10px;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
   }
-  .menu-center,
-  .menu-end {
+  .sidebar__body .menu-center,
+  .sidebar__body .menu-end {
     display: none;
   }
-  .menu-burger,
-  .menu-info {
+  .sidebar__body .menu-burger,
+  .sidebar__body .menu-info {
     display: block;
   }
   .menu-start {
@@ -936,24 +958,34 @@ Media
         -ms-flex-order: 2;
             order: 2;
     margin: 0;
+    z-index: 101;
   }
   .menu-start .icon-50 {
     width: 40px;
     height: 40px;
   }
+  .menu-start .logo[title]:hover::after {
+    display: none;
+  }
   .menu-burger {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    -webkit-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+  }
+  .menu-burger.active {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   .menu-info {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .logo[title]:hover::after {
-    display: none;
-  }
+  /*------------------------------------ Menu Burger */
 }
 
 /*------------------------------------ Content */
