@@ -31,16 +31,6 @@ $c_fon: #F5F9F7;
 
 //------------------------------------------------------------------------
 
-body {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-drag: none;
-  user-drag: none;
-  -webkit-touch-callout: none;
-}
-
 .wrapper {
 	@include flexbox(column, center, center);
 	min-width: 100%;

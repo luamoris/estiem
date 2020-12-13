@@ -3,11 +3,11 @@ Sidebar
 ==========================================================================*/
 
 .sidebar {
+	position: relative;
 	@include flexbox(column, space-between, center);
 	background-color: $c_sidebar;
 	padding: 15px 15px 35px 15px;
 }
-
 
 /*------------------------------------ Menu Start */
 
@@ -26,6 +26,55 @@ Sidebar
 	@include flexbox(column, center, center);
 	width: 100%;
 	height: calc(100% - 110px);
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: -20px;
+		top: -37px;
+		width: 18.5px;
+		height: 37px;
+		background-image: url(../img/pointer.svg);
+		background-size: 18.5px 37px;
+	}
+
+	&.home-active::after {
+		content: '';
+		position: absolute;
+		right: -20px;
+		top: calc(75px + 177px + 7px);
+		width: 18.5px;
+		height: 37px;
+		background-image: url(../img/pointer.svg);
+		background-size: 18.5px 37px;
+		transition: 300ms;
+	}
+
+	&.people-active::after {
+		top: calc(75px + 177px + 7px + 70px);
+		transition: 300ms;
+	}
+
+	&.event-active::after {
+		top: calc(75px + 177px + 7px + 140px);
+		transition: 300ms;
+	}
+
+	&.news-active::after {
+		top: calc(75px + 177px + 7px + 210px);
+		transition: 300ms;
+	}
+
+	&.handshake-active::after {
+		top: calc(75px + 177px + 7px + 280px);
+		transition: 300ms;
+	}
+
+	&.phone-active::after {
+		top: calc(75px + 177px + 7px + 350px);
+		transition: 300ms;
+	}
+
 }
 
 // .menu-center__list {}
