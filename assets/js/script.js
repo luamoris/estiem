@@ -45,11 +45,15 @@ const sidebar = document.querySelector('.sidebar');
 const menuCenter = document.querySelector('.menu-center');
 const menuBurger = document.querySelector('.menu-burger');
 
+const body = document.querySelector('body');
+const footer = document.querySelector('.footer');
+
 menuBurger.onclick = () => {
 	sidebar.classList.toggle('active');
 	menuBurger.classList.toggle('active');
 	menuCenter.classList.toggle('active');
 	body.classList.toggle('lock');
+	footer.classList.toggle('z');
 }
 
 // Language
