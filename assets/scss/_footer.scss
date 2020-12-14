@@ -22,12 +22,25 @@ Footer
 		color: $c_footer;
 	}
 	
-	& span span{
-		color: $c_sidebar;
-	}
-
 	& a {
-		color: $c_footer;
-		border-bottom: 1px solid $c_footer;
+		position: relative;
+		overflow: hidden;
+		color: $c_link;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 0;
+			height: 1px;
+			background-color: $c_link;
+			transition: 300ms cubic-bezier(0.68,-0.55,0.265,1.55);
+		}
+
+		&:hover::before {
+			left: 0;
+			width: 100%;
+		}
 	}
 }

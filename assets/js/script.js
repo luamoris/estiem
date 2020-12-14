@@ -20,6 +20,9 @@ const search = document.querySelector('.search');
 const searchInput = search.querySelector('.search__input');
 const searchCancel = search.querySelector('.search__cancel');
 
+searchInput.onfocus = () => { search.classList.add('active'); }
+searchInput.onblur = () => { search.classList.remove('active'); }
+
 searchInput.oninput = () => {
 	if (searchInput.value.length > 0) {
 		searchCancel.classList.remove('none');
@@ -47,4 +50,19 @@ menuBurger.onclick = () => {
 	menuBurger.classList.toggle('active');
 	menuCenter.classList.toggle('active');
 	body.classList.toggle('lock');
+}
+
+// Language
+
+const language = document.querySelector('.language');
+const languageList = language.querySelector('.language__list');
+const languageItems = languageList.children;
+
+for(const item of languageItems) {
+	item.onclick = () => {
+		const lng = item.querySelector('span');
+		console.log(lng);
+		if (languageList.classList[1]) { languageList.classList.remove(languageList.classList[1]); }
+		languageList.classList.add(`${lng.classList[0]}`);
+	};
 }

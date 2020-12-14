@@ -3,27 +3,90 @@ Buttons
 ==========================================================================*/
 
 .button {
-	@include flexbox(row, center, center);
-	cursor: pointer;
-	user-select: none; 
+	width: 100%;
+	height: 30px;
+	user-select: none;
 }
 
-.outline,
-.full {
+.button__case {
 	width: 100%;
 	height: 100%;
-	padding: 10px 20px;
-	border-radius: calc(0% + 50px);
+	border-radius: 90px;
+	position: relative;
+	overflow: hidden;
+}
+
+.button__link {
+	@include flexbox(row, center, center);
+	width: 100%;
+	height: 100%;
+	border-radius: 90px;
+	padding: 5px 20px 5px 20px;
+	font-size: 14px;
+	font-family: 'Montserrat';
+	font-weight: normal;
+	position: relative;
+	overflow: hidden;
+}
+
+.standard {
+	background-color: $c_hover;
+
+	.button__link {
+		color: $c_fon;
+	}
+}
+
+.attracting {
+	background-color: rgb(199, 86, 86);
+
+	.button__link {
+		color: $c_fon;
+	}
+}
+
+/*------------------------------------ Animations */
+
+.standard,
+.attracting {
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -5%;
+		right: 0;
+		width: 0;
+		height: 110%;
+		border-radius: 90px;
+		transition: 350ms ease-out;
+		background-color: $c_but_hover;
+		opacity: 0.9;
+	}
+
+	&:hover::before {
+		left: 0;
+		width: 120%;
+	}
+
+	&:active {
+		transform: scale(0.95);
+		transition: transform 50ms;
+	}
 }
 
 
-.outline {
-	border: 1px solid $c_sidebar;
-	box-sizing: border-box;
-	color: $c_sidebar;
+.standard {
+
+	&:before {
+		background-color: white;
+		opacity: 0.2;
+	}
 }
 
-.full {
-	background-color: $c_sidebar;
-	color: white;
+.attracting {
+
+	&:before {
+		background-color: white;
+		opacity: 0.2;
+	}
 }
