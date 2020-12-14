@@ -1,3 +1,34 @@
 /*========================================================================
 Section
 ==========================================================================*/
+
+.section__content {
+	width: 100%;
+	height: 100%;
+}
+
+.section_one {
+	background-color: $c_fon;
+}
+
+.section_two {
+	background-color: #ffe7e7;
+}
+
+.content-text {
+	padding: 20px;
+
+	p {
+		font-family: 'Montserrat';
+		font-size: 20px;
+		font-weight: normal;
+		font-stretch: ultra-expanded;
+		line-height: 2;
+		margin-bottom: 50px;
+		color: $c_footer;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
