@@ -895,6 +895,9 @@ Media
 
 /*------------------------------------ Sidebar */
 @media (max-width: 1000px) {
+  body.lock {
+    overflow: hidden;
+  }
   .sidebar {
     max-width: 100%;
     max-height: 100vh;
@@ -1002,8 +1005,10 @@ Media
   }
   .menu-center.active {
     display: block;
+    overflow: auto;
     width: 100%;
     height: calc(100% - 50px);
+    padding: 80px 10px 10px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1019,7 +1024,6 @@ Media
             align-items: flex-start;
   }
   .menu-center.active .menu-center__list {
-    margin-left: 10px;
     max-width: 100%;
   }
   .menu-center.active .menu-center__list ul::after {
@@ -1060,7 +1064,7 @@ Media
   .menu-center.active .menu-center__item .menu-center-text span {
     margin-left: 20px;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 32px;
     color: #79B89B;
   }
   .menu-center.active .menu-center__item:hover {

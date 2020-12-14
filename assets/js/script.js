@@ -46,4 +46,5 @@ menuBurger.onclick = () => {
 	sidebar.classList.toggle('active');
 	menuBurger.classList.toggle('active');
 	menuCenter.classList.toggle('active');
+	body.classList.toggle('lock');
 }
