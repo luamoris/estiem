@@ -68,5 +68,7 @@ for(const item of languageItems) {
 		console.log(lng);
 		if (languageList.classList[1]) { languageList.classList.remove(languageList.classList[1]); }
 		languageList.classList.add(`${lng.classList[0]}`);
+
+		languageMove(lng.classList[0]);
 	};
 }
