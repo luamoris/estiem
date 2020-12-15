@@ -6,6 +6,7 @@ Media
 .menu-info,
 .menu-center-text {
 	position: relative;
+	cursor: pointer;
 	display: none;
 }
 
@@ -190,9 +191,8 @@ Media
 }
 
 @keyframes menu_active {
-	0% { transform: translateX(+200vh); }
-	50% { transform: translateX(+200vh); }
-	100% { transform: translateX(0); }
+	0% { transform: translateY(-100vh); }
+	100% { transform: translateY(0); }
 }
 
 /*------------------------------------ Content */

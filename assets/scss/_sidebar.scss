@@ -132,6 +132,7 @@ Sidebar
 	@include size(50px, 50px);
 	margin-bottom: 20px;
 	border-radius: 50%;
+	cursor: pointer;
 
 	&:last-child {
 		margin: 0;	

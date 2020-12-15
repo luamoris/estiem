@@ -509,7 +509,6 @@ Main settings
           flex-direction: column;
   height: 100%;
   width: 100%;
-  overflow: auto;
 }
 
 .content__body {
@@ -526,7 +525,7 @@ Main settings
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  min-height: 100vh;
   background-color: #F5F9F7;
 }
 
@@ -573,19 +572,24 @@ img {
 }
 
 /*------------------------------------ Scrollbar */
-.content::-webkit-scrollbar-track {
+::-webkit-scrollbar {
+  width: 5px;
   background-color: transparent;
   border-radius: 0px;
 }
 
-.content::-webkit-scrollbar {
-  width: 4px;
-  background-color: transparent;
-}
-
-.content::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   border-radius: 0px;
   background-color: #79B89B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 0px;
+  background-color: #79B89B;
+}
+
+::-webkit-scrollbar-track {
+  border-width: 0;
 }
 
 /*========================================================================
@@ -780,6 +784,7 @@ Sidebar
   height: 50px;
   margin-bottom: 20px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .menu-center__item:last-child {
@@ -1082,6 +1087,7 @@ Section
 
 .section_two {
   background-color: #ffe7e7;
+  min-height: 100vh;
 }
 
 .content-text {
@@ -1168,6 +1174,7 @@ Media
 .menu-info,
 .menu-center-text {
   position: relative;
+  cursor: pointer;
   display: none;
 }
 
@@ -1437,31 +1444,23 @@ Media
 
 @-webkit-keyframes menu_active {
   0% {
-    -webkit-transform: translateX(200vh);
-            transform: translateX(200vh);
-  }
-  50% {
-    -webkit-transform: translateX(200vh);
-            transform: translateX(200vh);
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes menu_active {
   0% {
-    -webkit-transform: translateX(200vh);
-            transform: translateX(200vh);
-  }
-  50% {
-    -webkit-transform: translateX(200vh);
-            transform: translateX(200vh);
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
