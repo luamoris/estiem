@@ -103,7 +103,8 @@ Header
 /*------------------------------------ Buttons */
 
 .header__butoons {
-	@include flexbox(row, space-between, center);
+	@include flexbox(row, flex-end, center);
+	min-width: 260px;
 	height: 100%;
 
 	.button {

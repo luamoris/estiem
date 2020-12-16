@@ -3,13 +3,13 @@ Buttons
 ==========================================================================*/
 
 .button {
-	width: 100%;
+	// width: 100%;
 	height: 30px;
 	user-select: none;
 }
 
 .button__case {
-	width: 100%;
+	// width: 100%;
 	height: 100%;
 	border-radius: 90px;
 	position: relative;
@@ -18,7 +18,7 @@ Buttons
 
 .button__link {
 	@include flexbox(row, center, center);
-	width: 100%;
+	// width: 100%;
 	height: 100%;
 	border-radius: 90px;
 	padding: 5px 20px 5px 20px;

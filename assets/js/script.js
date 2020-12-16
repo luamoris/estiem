@@ -8,9 +8,17 @@ const listUl = menuCenterList.querySelector('ul');
 const menuItems = document.getElementsByClassName('menu-center__item');
 for(const item of menuItems) {
 	item.onclick = () => {
-		const element = item.querySelector('div');
-		if (listUl.classList[0]) { listUl.classList.remove(listUl.classList[0]); }
-		listUl.classList.add(`${element.classList[0]}-active`);
+		if (window.innerWidth > 800) {
+			const element = item.querySelector('div');
+			if (listUl.classList[0]) { listUl.classList.remove(listUl.classList[0]); }
+			listUl.classList.add(`${element.classList[0]}-active`);
+		} else {
+			sidebar.classList.remove('active');
+			menuBurger.classList.remove('active');
+			menuCenter.classList.remove('active');
+			body.classList.remove('lock');
+			footer.classList.remove('z');
+		}
 	};
 }
 

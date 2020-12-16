@@ -2,6 +2,11 @@
 Media
 ==========================================================================*/
 
+
+
+// баг: при вертикальном расположении экрана, когда меню не помещается - оно вылетает впереди шторки
+// баг при вертикальном просмотре нельзя добраться до кнопок меню на пк версии
+
 .menu-burger,
 .menu-info,
 .menu-center-text {
@@ -40,7 +45,7 @@ Media
 			height: 100vh;
 			background-color: $c_mobil_menu;
 			z-index: -1;
-			transition: all 500ms ease 0s;
+			transition: all 400ms ease 0s;
 		}
 
 		&.active::before { top: 0; }
@@ -213,11 +218,7 @@ Media
 					padding: 0;
 
 					p {
-						font-family: 'Montserrat';
-						font-size: 12px;
-						font-weight: normal;
-						font-stretch: extra-expanded;
-						line-height: 1.5;
+						font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1810 - 320)));
 						margin-bottom: 15px;
 						color: $c_footer;
 
@@ -238,6 +239,13 @@ Media
 	
 					.conteiner {
 						padding: 20px 15px;
+					}
+				}
+
+				&.sponsors {
+
+					.conteiner {
+						padding: 60px 15px 20px 15px;
 					}
 				}
 			}
