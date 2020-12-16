@@ -13,11 +13,13 @@ for(const item of menuItems) {
 			if (listUl.classList[0]) { listUl.classList.remove(listUl.classList[0]); }
 			listUl.classList.add(`${element.classList[0]}-active`);
 		} else {
-			sidebar.classList.remove('active');
-			menuBurger.classList.remove('active');
-			menuCenter.classList.remove('active');
-			body.classList.remove('lock');
-			footer.classList.remove('z');
+			setTimeout(() => {
+				sidebar.classList.remove('active');
+				menuBurger.classList.remove('active');
+				menuCenter.classList.remove('active');
+				body.classList.remove('lock');
+				footer.classList.remove('z');
+			}, 500);
 		}
 	};
 }
