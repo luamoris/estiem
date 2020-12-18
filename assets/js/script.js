@@ -19,7 +19,7 @@ for(const item of menuItems) {
 				menuCenter.classList.remove('active');
 				body.classList.remove('lock');
 				footer.classList.remove('z');
-			}, 500);
+			}, 200);
 		}
 	};
 }
@@ -94,30 +94,35 @@ const eventsUl = events.querySelector('ul');
 const eventsItems = eventsUl.children;
 
 
-console.dir(eventsItems.length);
-
 let bottomItems = 5;
 let maxItems = eventsItems.length;
 
 if (bottomItems < maxItems) { btnDown.classList.add('active'); }
 
 btnUp.onclick = () => {
+	console.dir(eventsItems[0]);
 	if (bottomItems > 5) {
-		const scrollTop = Number(eventsUl.scrollTop) - 120;
-		eventsUl.scrollTop = scrollTop;
-		bottomItems--;
-		if (bottomItems == 5) { btnUp.classList.remove('active'); }
-		if (bottomItems < maxItems) { btnDown.classList.add('active'); }
+		setTimeout(() => {
+			const size = (eventsItems[0].querySelector('.events__item-content')).clientHeight + 20;
+			const scrollTop = Number(eventsUl.scrollTop) - size;
+			eventsUl.scrollTop = scrollTop;
+			bottomItems--;
+			if (bottomItems == 5) { btnUp.classList.remove('active'); }
+			if (bottomItems < maxItems) { btnDown.classList.add('active'); }
+		}, 100);
 	}
 }
 
 btnDown.onclick = () => {
 	if (bottomItems < maxItems) {
-		const scrollTop = Number(eventsUl.scrollTop) + 120;
-		eventsUl.scrollTop = scrollTop;
-		bottomItems++;
-
-		if (bottomItems > 5) { btnUp.classList.add('active'); }
-		if (bottomItems == maxItems) { btnDown.classList.remove('active'); }
+		setTimeout(() => {
+			const size = (eventsItems[0].querySelector('.events__item-content')).clientHeight + 20;
+			const scrollTop = Number(eventsUl.scrollTop) + size;
+			eventsUl.scrollTop = scrollTop;
+			bottomItems++;
+	
+			if (bottomItems > 5) { btnUp.classList.add('active'); }
+			if (bottomItems == maxItems) { btnDown.classList.remove('active'); }
+		}, 100);
 	}
 }

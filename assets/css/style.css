@@ -1314,14 +1314,14 @@ Events
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: calc(100% - 100px);
-  min-height: 720px;
+  height: 100%;
 }
 
 .events__content {
@@ -1445,12 +1445,34 @@ Events
   background-color: #79B89B;
 }
 
+@media (max-width: 1920px) {
+  .events__content {
+    height: calc(350px + (600 - 350) * ((100vw - 320px) / (1810 - 320)));
+  }
+  .events__item {
+    height: calc(50px + (100 - 50) * ((100vw - 320px) / (1810 - 320)));
+  }
+}
+
 @media (max-width: 800px) {
   .events .conteiner {
     padding: 15px;
   }
   .events__list {
     width: 100%;
+  }
+  .events__item-line {
+    display: none;
+  }
+  .events__item-content::after,
+  .events__item-content::before {
+    display: none;
+  }
+  .events__item-content {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 

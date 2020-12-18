@@ -14,9 +14,9 @@ Events
 }
 
 .events__list {
-	@include flexbox(column, space-between, center);
+	@include flexbox(column, center, center);
 	width: calc(100% - 100px);
-	min-height: 720px;
+	height: 100%;
 }
 
 .events__content {
@@ -107,6 +107,16 @@ Events
 	}
 }
 
+@media (max-width: 1920px) {
+	.events__content {
+		height: calc(350px + (600 - 350) * ((100vw - 320px) / (1810 - 320)));
+	}
+	.events__item {
+		height: calc(50px + (100 - 50) * ((100vw - 320px) / (1810 - 320)));
+	}
+
+}
+
 @media (max-width: 800px) {
 	.events .conteiner {
 		padding: 15px;
@@ -114,4 +124,9 @@ Events
 	.events__list {
 		width: 100%;
 	}
+	.events__item-line { display: none; }
+	.events__item-content::after,
+	.events__item-content::before { display: none; }
+
+	.events__item-content { width: 100%; flex: 0 1 100%; }
 }

@@ -68,7 +68,7 @@
 					<div class="menu-center__list">
 						<ul class="">
 							<li class="menu-center__item">
-								<a draggable="false">
+								<a href="#home" draggable="false">
 									<div class="home icon-30">
 										<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M36.5354 17.3235L19.8152 0.546468C19.464 0.194121 18.9968 0 18.5002 0C18.0033 0 17.5361 0.193947 17.1851 0.546468L0.464679 17.3235C-0.0953752 17.8853 -0.0299296 18.3683 0.0587819 18.5977C0.147661 18.8268 0.412791 19.2259 1.19044 19.2259H3.07313V34.137C3.07313 35.6889 4.35794 37 5.81281 37H14.2876V26.8931H22.4892V37H31.1871C32.6467 37 33.8711 35.6621 33.8711 34.137V19.2259H35.8095C36.5872 19.2259 36.8521 18.8268 36.9412 18.5977C37.0299 18.3683 37.0955 17.8855 36.5354 17.3235Z" fill="white"/>
@@ -76,7 +76,7 @@
 									</div>
 								</a>
 								<div class="menu-center-text">
-									<a href="#" draggable="false"><span>Головна</span></a>
+									<a href="#home" draggable="false"><span>Головна</span></a>
 								</div>
 							</li>
 							<li class="menu-center__item">
@@ -101,7 +101,7 @@
 								</div>
 							</li>
 							<li class="menu-center__item">
-								<a draggable="false">
+								<a href="#events" draggable="false">
 									<div class="event icon-30">
 										<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M8 5H2V7V8V13H35V8V7V5H29V7H24V5H12V7H8V5Z" fill="white" />
@@ -112,7 +112,7 @@
 									</div>
 								</a>
 								<div class="menu-center-text">
-									<a href="#" draggable="false"><span>Івенти</span></a>
+									<a href="#events" draggable="false"><span>Івенти</span></a>
 								</div>
 							</li>
 							<li class="menu-center__item">
@@ -158,7 +158,7 @@
 								</div>
 							</li>
 							<li class="menu-center__item">
-								<a draggable="false">
+								<a href="#contacts" draggable="false">
 									<div class="phone icon-30">
 										<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
@@ -168,7 +168,7 @@
 									</div>
 								</a>
 								<div class="menu-center-text">
-									<a href="#" draggable="false"><span>Контакти</span></a>
+									<a href="#contacts" draggable="false"><span>Контакти</span></a>
 								</div>
 							</li>
 						</ul>
@@ -234,8 +234,9 @@
 					</div>
 				</header>
 	
+
 				<!-- Section content -->
-				<section class="section section_one">
+				<section class="section section_one" id="home">
 					<div class="conteiner">
 						<div class="section__content">
 							<div class="content-text">
@@ -278,50 +279,10 @@
 				</section>
 
 				<!-- Section Sponsors -->
-				<section class="section sponsors" id="sponsors">
-					<div class="conteiner">
-						<div class="section__content">
-
-							<div class="content-sponsors">
-
-								<div class="sponsor-card">
-									<div class="sponsor-card__img">
-										<img src="./assets/img/img_vision.svg" alt="">
-									</div>
-									<p>
-										Тематичний проєкт, насичений семінарами, воркшопами та візитами до компаній із метою поглибленого розуміння тематики
-										проеєкту. Студенти отримують можливість поглибити свої теоретичні знання на практиці в промисловій індустрії.
-										Минулорічні теми Vision: «Вік ШІ», «Продукти харчування: виробництво та логістика», «Python для аналізу даних»,
-										«Логістика – майбутнє складування», «eDrive - Майбутнє мобільності», «Data Science».
-									</p>
-									<hr>
-								</div>
-
-								<div class="sponsor-card sponsor-card_reverse">
-									<div class="sponsor-card__img">
-										<img src="./assets/img/img_times.svg" alt="">
-									</div>
-									<p>
-										Найбільший турнір Європи з вирішення бізнес-кейсів у сфері IEM. Щороку даний захід залучає більше 350 команд, які
-										змагаються за звання IEM-студента року у три етапи: місцева кваліфікація, півфінал і фінал. На турнірі команди повинні
-										застосовувати професійні знання в поєднанні з аналітичним та креативним мисленням. Важливу роль відіграють навички
-										презентації та вміння критично мислити. Завдяки залученню провідних світових та європейських компаній до партнерства, а
-										також членів журі (представників компаній та професорів) TIMES об'єднує топ-студентів із потенційними роботодавцями.
-									</p>
-									<hr>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-				</section>
-
-				<!-- Section Sponsors -->
 				<section class="section events" id="events">
 					<div class="conteiner">
 						<div class="section__content">
-
+				
 							<div class="events__body">
 								<div class="events__list">
 									<div class="butt__up"></div>
@@ -374,13 +335,53 @@
 									<div class="butt__down"></div>
 								</div>
 							</div>
+				
+						</div>
+					</div>
+				</section>
+
+				<!-- Section Sponsors -->
+				<section class="section sponsors" id="sponsors">
+					<div class="conteiner">
+						<div class="section__content">
+
+							<div class="content-sponsors">
+
+								<div class="sponsor-card">
+									<div class="sponsor-card__img">
+										<img src="./assets/img/img_vision.svg" alt="">
+									</div>
+									<p>
+										Тематичний проєкт, насичений семінарами, воркшопами та візитами до компаній із метою поглибленого розуміння тематики
+										проеєкту. Студенти отримують можливість поглибити свої теоретичні знання на практиці в промисловій індустрії.
+										Минулорічні теми Vision: «Вік ШІ», «Продукти харчування: виробництво та логістика», «Python для аналізу даних»,
+										«Логістика – майбутнє складування», «eDrive - Майбутнє мобільності», «Data Science».
+									</p>
+									<hr>
+								</div>
+
+								<div class="sponsor-card sponsor-card_reverse">
+									<div class="sponsor-card__img">
+										<img src="./assets/img/img_times.svg" alt="">
+									</div>
+									<p>
+										Найбільший турнір Європи з вирішення бізнес-кейсів у сфері IEM. Щороку даний захід залучає більше 350 команд, які
+										змагаються за звання IEM-студента року у три етапи: місцева кваліфікація, півфінал і фінал. На турнірі команди повинні
+										застосовувати професійні знання в поєднанні з аналітичним та креативним мисленням. Важливу роль відіграють навички
+										презентації та вміння критично мислити. Завдяки залученню провідних світових та європейських компаній до партнерства, а
+										також членів журі (представників компаній та професорів) TIMES об'єднує топ-студентів із потенційними роботодавцями.
+									</p>
+									<hr>
+								</div>
+
+							</div>
 
 						</div>
 					</div>
 				</section>
 
 				<!-- Section content -->
-				<section class="section section_two">
+				<section class="section section_two" id="contacts">
 					<div class="conteiner">
 						<div class="section__content">
 							<div class="content-text">
@@ -402,6 +403,7 @@
 					</div>
 				</section>
 	
+
 				<!-- Footer -->
 				<footer class="footer">
 					<div class="conteiner">
