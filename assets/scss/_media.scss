@@ -36,6 +36,8 @@ Media
 		width: 100%;
 		height: auto;
 
+		z-index: 20;
+
 		&::before {
 			position: absolute;
 			content: '';
@@ -44,7 +46,6 @@ Media
 			width: 100%;
 			height: 100vh;
 			background-color: $c_mobil_menu;
-			z-index: -1;
 			transition: all 400ms ease 0s;
 		}
 
@@ -72,6 +73,8 @@ Media
 				margin: 0;
 				padding: 5px 15px;
 				background-color: $c_sidebar;
+				position: relative;
+
 
 				.menu-burger,
 				.menu-info { display: block; }
@@ -80,7 +83,6 @@ Media
 
 				.menu-logo {
 					order: 2;
-					z-index: 101;
 
 					& .icon-50 {
 						width: 40px;
@@ -205,6 +207,9 @@ Media
 
 	.content {
 
+		position: relative;
+		z-index: 5;
+
 		.content__body {
 			@include flexbox(column, space-between, center);
 			height: 100%;
@@ -258,13 +263,9 @@ Media
 /*------------------------------------ Footer */
 @media (max-width: 800px) {
 
-	.footer.z {
-		z-index: -2;
-	}
+
 
 	.footer {
-		position: relative;
-		z-index: 1;
 		width: 100%;
 		height: 20px;
 		background-color: white;
@@ -272,6 +273,7 @@ Media
 		& .conteiner {
 			padding: 2px 15px;
 		}
+
 	}
 
 	.footer__body {

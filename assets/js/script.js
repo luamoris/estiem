@@ -63,7 +63,6 @@ menuBurger.onclick = () => {
 	menuBurger.classList.toggle('active');
 	menuCenter.classList.toggle('active');
 	body.classList.toggle('lock');
-	footer.classList.toggle('z');
 }
 
 // Language
@@ -81,4 +80,44 @@ for(const item of languageItems) {
 
 		languageMove(lng.classList[0]);
 	};
+}
+
+
+// events
+
+const events = document.querySelector('.events__body');
+
+const btnUp = events.querySelector('.butt__up');
+const btnDown = events.querySelector('.butt__down');
+
+const eventsUl = events.querySelector('ul');
+const eventsItems = eventsUl.children;
+
+
+console.dir(eventsItems.length);
+
+let bottomItems = 5;
+let maxItems = eventsItems.length;
+
+if (bottomItems < maxItems) { btnDown.classList.add('active'); }
+
+btnUp.onclick = () => {
+	if (bottomItems > 5) {
+		const scrollTop = Number(eventsUl.scrollTop) - 120;
+		eventsUl.scrollTop = scrollTop;
+		bottomItems--;
+		if (bottomItems == 5) { btnUp.classList.remove('active'); }
+		if (bottomItems < maxItems) { btnDown.classList.add('active'); }
+	}
+}
+
+btnDown.onclick = () => {
+	if (bottomItems < maxItems) {
+		const scrollTop = Number(eventsUl.scrollTop) + 120;
+		eventsUl.scrollTop = scrollTop;
+		bottomItems++;
+
+		if (bottomItems > 5) { btnUp.classList.add('active'); }
+		if (bottomItems == maxItems) { btnDown.classList.remove('active'); }
+	}
 }
